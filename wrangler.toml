@@ -1,0 +1,17 @@
+name = "cinouhome"
+pages_build_output_dir = "."
+compatibility_date = "2024-09-23"
+
+# GOOGLE_CLIENT_ID is public (it identifies the app, not a secret — see the
+# comment in index.html), so it's safe to commit here. _dev.vars only
+# applies to local `wrangler pages dev`; without this, the deployed
+# Function's env.GOOGLE_CLIENT_ID was undefined, so every real sign-in
+# failed the `payload.aud !== env.GOOGLE_CLIENT_ID` check in comments.js
+# with 401 "Token was not issued for this app".
+[vars]
+GOOGLE_CLIENT_ID = "49503095841-k06kc4q09pelg5e2dvu87bu1vklt9oh9.apps.googleusercontent.com"
+
+[[d1_databases]]
+binding = "DB"                          # matches env.DB in functions/api/comments.js
+database_name = "cinou_comments"
+database_id = "8c097ada-1ddc-477a-a604-63ee1ff8dde9"

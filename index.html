@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinou AI — Think without limits</title>
+<meta name="description" content="Cinou AI is the assistant that understands you. Try it on the web, take it Premium, or bring it with you on your phone.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://cinouhome.pages.dev/">
+
+<meta name="theme-color" content="#000000">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cinou AI">
+<meta property="og:title" content="Cinou AI — Think without limits">
+<meta property="og:description" content="Cinou AI is the assistant that understands you. Try it on the web, take it Premium, or bring it with you on your phone.">
+<meta property="og:url" content="https://cinouhome.pages.dev/">
+<meta property="og:image" content="https://cinouhome.pages.dev/logo.png">
+
+<!-- Twitter/X -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cinou AI — Think without limits">
+<meta name="twitter:description" content="Cinou AI is the assistant that understands you. Try it on the web, take it Premium, or bring it with you on your phone.">
+<meta name="twitter:image" content="https://cinouhome.pages.dev/logo.png">
+
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+<!-- Google client ID is public by design — it identifies the app, not a secret.
+     Paste the one from Google Cloud Console → Credentials → OAuth 2.0 Client ID. -->
+<meta name="google-signin-client_id" content="49503095841-k06kc4q09pelg5e2dvu87bu1vklt9oh9.apps.googleusercontent.com">
+</head>
+<body>
+
+<!-- ===================== CINOU WAKE-UP OVERLAY ===================== -->
+<div class="cinou-wake-overlay" id="cinouWakeOverlay" role="alertdialog" aria-modal="true" aria-labelledby="cinouWakeTitle" hidden>
+  <div class="cinou-wake-overlay__inner">
+    <img src="assets/logo.png" alt="" class="cinou-wake-overlay__logo">
+    <div class="cinou-wake-overlay__spinner" aria-hidden="true"></div>
+    <h2 id="cinouWakeTitle">Waking up Cinou AI…</h2>
+    <p class="cinou-wake-overlay__status" id="cinouWakeStatus">This can take a few seconds on the first visit.</p>
+    <a href="https://cinouai.onrender.com/" class="btn btn--secondary btn--small cinou-wake-overlay__direct" id="cinouWakeDirectLink" hidden>Open it directly</a>
+  </div>
+</div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__brand" href="#top">
+      <img src="assets/logo.png" alt="Cinou AI" class="nav__logo">
+      <span class="nav__wordmark">Cinou<span class="nav__wordmark-ai">AI</span></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="/about">About</a>
+      <a href="#product">Product</a>
+      <a href="#premium">Premium</a>
+      <a href="#download">Download</a>
+      <a href="#comments">Comments</a>
+    </nav>
+
+    <a class="btn btn--primary btn--small js-launch-cinou" href="https://cinouai.onrender.com/">Try Cinou AI in your browser</a>
+
+    <button class="nav__burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/about">About</a>
+    <a href="#product">Product</a>
+    <a href="#premium">Premium</a>
+    <a href="#download">Download</a>
+    <a href="#comments">Comments</a>
+    <a class="btn btn--primary js-launch-cinou" href="https://cinouai.onrender.com/">Try Cinou AI</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="product">
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">Introducing Cinou AI</p>
+      <h1 class="hero__title">An assistant that<br>thinks with you, not at you.</h1>
+      <p class="hero__subtitle">
+        Cinou AI helps you write, plan, research and build — in a conversation
+        that actually remembers where you left off. Free to start, everywhere you work.
+      </p>
+
+      <div class="hero__actions">
+        <a href="https://cinouai.onrender.com/" class="btn btn--primary btn--large js-launch-cinou">Try Cinou AI on web</a>
+        <a href="https://cinouai-premium-2.onrender.com/" class="btn btn--secondary btn--large">Cinou Premium</a>
+        <button type="button" class="btn btn--ghost btn--large" id="openPhoneModal">
+          Download CinouAI on your phone
+        </button>
+      </div>
+
+      <button type="button" class="hero__pc-note" id="openPcModal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        Download CinouAI on your PC
+      </button>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="browser-stack">
+        <div class="browser-card browser-card--back-left"></div>
+        <div class="browser-card browser-card--back-right"></div>
+        <div class="browser-card browser-card--front">
+          <div class="browser-card__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <div class="browser-card__url">cinou.ai</div>
+          </div>
+          <div class="browser-card__body">
+            <div class="chat-window">
+              <div class="chat-window__top">
+                <img src="assets/logo.png" alt="" class="chat-window__logo">
+                <span>Cinou AI</span>
+              </div>
+              <div class="chat-bubble chat-bubble--user">Draft a launch email for our new feature</div>
+              <div class="chat-bubble chat-bubble--ai">On it — want it short and punchy, or a longer walkthrough with screenshots?</div>
+              <div class="chat-bubble chat-bubble--user">Short and punchy</div>
+              <div class="chat-input">
+                <span>Ask Cinou anything…</span>
+                <span class="chat-input__send"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES ===================== -->
+<section class="features">
+  <div class="section-inner">
+    <h2 class="section-title">Why people switch to Cinou</h2>
+    <div class="features__grid">
+      <div class="feature">
+        <div class="feature__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3a7 7 0 0 0-4 12.7V19a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3.3A7 7 0 0 0 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M10 22h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Understands context</h3>
+        <p>Cinou keeps track of the whole conversation, not just the last message, so you don't repeat yourself.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Works everywhere</h3>
+        <p>Start a thread on the web and pick it back up on your phone. Your work follows you, not the device.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6v5c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Private by design</h3>
+        <p>Your conversations are yours. Cinou is built so nothing you share becomes someone else's training data by default.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PREMIUM ===================== -->
+<section class="premium" id="premium">
+  <div class="section-inner premium__inner">
+    <div class="premium__copy">
+      <p class="hero__eyebrow">Cinou Premium</p>
+      <h2 class="section-title section-title--left">Go further, with fewer limits.</h2>
+      <p class="premium__lede">Premium unlocks longer conversations, faster responses at peak times, and early access to new Cinou features.</p>
+      <ul class="premium__list">
+        <li>Priority access during busy hours</li>
+        <li>Extended memory across conversations</li>
+        <li>Early access to new capabilities</li>
+        <li>Premium-only support channel</li>
+      </ul>
+      <a href="https://cinouai-premium-2.onrender.com/" class="btn btn--primary btn--large">Get Cinou Premium</a>
+    </div>
+
+    <div class="premium__card">
+      <div class="premium__card-top">
+        <span class="premium__card-label">Premium</span>
+        <p class="premium__card-price">Simple monthly pricing</p>
+      </div>
+      <ul class="premium__card-features">
+        <li>Everything in the free plan</li>
+        <li>Priority response speed</li>
+        <li>Extended conversation memory</li>
+        <li>Early feature access</li>
+      </ul>
+      <a href="https://cinouai-premium-2.onrender.com/" class="btn btn--primary premium__card-cta">Upgrade to Premium</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DOWNLOAD ===================== -->
+<section class="download" id="download">
+  <div class="section-inner">
+    <h2 class="section-title">Take Cinou with you</h2>
+    <p class="download__lede">One assistant, wherever you're working from.</p>
+
+    <div class="download__grid">
+      <div class="download-tile">
+        <div class="download-tile__icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M6 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4Z" stroke="currentColor" stroke-width="1.5"/><path d="M11 19h2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Cinou on your phone</h3>
+        <p>iPhone and Android, built for quick questions on the move.</p>
+        <button type="button" class="btn btn--secondary" id="openPhoneModal2">Download for phone</button>
+      </div>
+
+      <div class="download-tile">
+        <div class="download-tile__icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Cinou on your PC</h3>
+        <p>A dedicated desktop app for Windows, Mac and Linux.</p>
+        <button type="button" class="btn btn--secondary" id="openPcModal2">Download for PC</button>
+      </div>
+
+      <div class="download-tile">
+        <div class="download-tile__icon" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3>Cinou on the web</h3>
+        <p>No install needed — open your browser and start.</p>
+        <a href="https://cinouai.onrender.com/" class="btn btn--secondary">Open Cinou AI</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMMENTS ===================== -->
+<section class="comments" id="comments">
+  <div class="section-inner comments__inner">
+    <h2 class="section-title section-title--left">What people are saying</h2>
+    <p class="comments__lede">Leave a comment, or reply to someone else's. Comments are stored in your browser for this demo.</p>
+
+    <div class="comment-auth" id="commentAuth">
+      <div class="comment-auth__signed-out" id="authSignedOut">
+        <p class="comment-auth__lede">Sign in with Google to post a comment or reply.</p>
+        <div id="googleSignInBtn" class="google-btn-slot"></div>
+      </div>
+
+      <div class="comment-auth__signed-in" id="authSignedIn" hidden>
+        <img class="comment-auth__avatar" id="authAvatar" src="" alt="">
+        <span class="comment-auth__name" id="authName"></span>
+        <button type="button" class="comment-auth__signout" id="signOutBtn">Sign out</button>
+      </div>
+    </div>
+
+    <form class="comment-form" id="commentForm" hidden>
+      <textarea id="commentBody" placeholder="Share your thoughts about Cinou AI…" required maxlength="600" rows="3"></textarea>
+      <div class="comment-form__footer">
+        <span class="comment-form__count"><span id="charCount">0</span>/600</span>
+        <button type="submit" class="btn btn--primary">Post comment</button>
+      </div>
+    </form>
+
+    <div class="comment-list" id="commentList" aria-live="polite">
+      <!-- comments injected by script.js -->
+    </div>
+    <p class="comment-empty" id="commentEmpty">No comments yet — be the first to share your thoughts.</p>
+  </div>
+</section>
+<main>
+  <div class="about-cta">
+      <h2>follow us in:</h2>
+      <p>
+        Facebook: none
+        Instagram: cinou.ai
+        Twitter -X-: none.
+        Youtube: Cooming soon. 
+      </p>
+    </div>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="section-inner footer__inner">
+    <a class="nav__brand" href="#top">
+      <img src="assets/logo.png" alt="Cinou AI" class="nav__logo">
+      <span class="nav__wordmark">Cinou<span class="nav__wordmark-ai">AI</span></span>
+    </a>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="/about">About</a>
+      <a href="#product">Product</a>
+      <a href="#premium">Premium</a>
+      <a href="#download">Download</a>
+      <a href="#comments">Comments</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
+    <p class="footer__copy">© <span id="year"></span> Cinou AI. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ===================== PHONE DOWNLOAD MODAL ===================== -->
+<div class="phone-modal" id="phoneModal" role="dialog" aria-modal="true" aria-labelledby="phoneModalTitle" hidden>
+  <div class="phone-modal__inner">
+    <button type="button" class="phone-modal__close" id="closePhoneModal" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+
+    <img src="assets/logo.png" alt="" class="phone-modal__logo">
+    <h2 id="phoneModalTitle">Download Cinou AI</h2>
+    <p class="phone-modal__lede">Get the app on your phone and keep the conversation going wherever you are.</p>
+
+    <div class="phone-modal__options">
+      <a href="https://cinouai.onrender.com/" id="iphoneDownloadLink" class="phone-option phone-option--link">
+        <div class="phone-option__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M16.7 12.6c0-2.5 2-3.6 2.1-3.7-1.1-1.6-2.9-1.9-3.5-1.9-1.5-.1-2.9.9-3.6.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1.9-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.5 1.2-.1 1.7-.8 3.1-.8 1.4 0 1.9.8 3.2.7 1.3 0 2.2-1.2 3-2.4.6-.9 1-1.8 1.4-2.8-1.7-.7-2.7-2.4-2.7-3.9Z" fill="currentColor"/><path d="M14.3 5.4c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.6 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.6-1.3Z" fill="currentColor"/></svg>
+        </div>
+        <div class="phone-option__text">
+          <h3>iPhone</h3>
+          <p>Click me</p>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="phone-option__go"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="/app-debug.apk" download="CinouAI.apk" class="phone-option phone-option--link">
+        <div class="phone-option__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M6.5 8.5 4.8 5.6M17.5 8.5l1.7-2.9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><rect x="6" y="8.5" width="12" height="11" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M9 20.5v1M15 20.5v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6 12.5h12" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="phone-option__text">
+          <h3>Android</h3>
+          <p>Click me</p>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="phone-option__go"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PC DOWNLOAD MODAL ===================== -->
+<div class="phone-modal" id="pcModal" role="dialog" aria-modal="true" aria-labelledby="pcModalTitle" hidden>
+  <div class="phone-modal__inner">
+    <button type="button" class="phone-modal__close" id="closePcModal" aria-label="Close">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+
+    <img src="assets/logo.png" alt="" class="phone-modal__logo">
+    <h2 id="pcModalTitle">Download Cinou AI</h2>
+    <p class="phone-modal__lede">Get the desktop app and keep the conversation going on your computer.</p>
+
+    <div class="phone-modal__options">
+      <div class="phone-option" style="opacity:.55; cursor:not-allowed;" aria-disabled="true">
+        <div class="phone-option__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M16.7 12.6c0-2.5 2-3.6 2.1-3.7-1.1-1.6-2.9-1.9-3.5-1.9-1.5-.1-2.9.9-3.6.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1.9-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.5 1.2-.1 1.7-.8 3.1-.8 1.4 0 1.9.8 3.2.7 1.3 0 2.2-1.2 3-2.4.6-.9 1-1.8 1.4-2.8-1.7-.7-2.7-2.4-2.7-3.9Z" fill="currentColor"/><path d="M14.3 5.4c.6-.8 1.1-1.9 1-3-.9.1-2 .6-2.6 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2-.5 2.6-1.3Z" fill="currentColor"/></svg>
+        </div>
+        <div class="phone-option__text">
+          <h3>macOS</h3>
+          <p>Coming soon</p>
+        </div>
+      </div>
+
+      <a href="https://github.com/cinou07/CinouAI-Windows/releases/download/1.0.0/CinouAI-Setup-1.0.0.exe" download="CinouAI-Setup.exe" class="phone-option phone-option--link">
+        <div class="phone-option__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M3 5.5 11 4.3v7.2H3V5.5zM12 4.2 21 3v8.5h-9V4.2zM3 12.5h8v7.2L3 18.5v-6zM12 12.5h9V21l-9-1.2v-7.3z" fill="currentColor"/></svg>
+        </div>
+        <div class="phone-option__text">
+          <h3>Windows</h3>
+          <p>Click me</p>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="phone-option__go"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a href="https://github.com/cinou07/CinouAI-Windows/actions/runs/35876947907/artifacts/10758062932" download="CinouAI.AppImage" class="phone-option phone-option--link">
+        <div class="phone-option__icon" aria-hidden="true">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+            <ellipse cx="12" cy="13.5" rx="6" ry="7.8" fill="currentColor"/>
+            <ellipse cx="12" cy="9.5" rx="3" ry="3.4" fill="var(--cream)"/>
+            <circle cx="10.8" cy="9.1" r=".65" fill="currentColor"/>
+            <circle cx="13.2" cy="9.1" r=".65" fill="currentColor"/>
+            <path d="M12 10.1 11.2 11.3h1.6L12 10.1Z" fill="var(--accent-dark)"/>
+            <ellipse cx="9.3" cy="18.2" rx="1.3" ry=".75" fill="var(--accent-dark)"/>
+            <ellipse cx="14.7" cy="18.2" rx="1.3" ry=".75" fill="var(--accent-dark)"/>
+          </svg>
+        </div>
+        <div class="phone-option__text">
+          <h3>Linux</h3>
+          <p>Click me</p>
+        </div>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="phone-option__go"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="script.js"></script>
+<script src="loader.js"></script>
+</body>
+</html>
