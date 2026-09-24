@@ -1,0 +1,81 @@
+# robots.txt for https://cinouai.eu.org/
+# This is one of 3 mirrored "edges" of the same Cinouhome site:
+#   Edge 1 (backup):  https://cinou07.github.io/cinouhome-backup/
+#   Edge 2:            https://cinouai.eu.org/
+#   Edge 3 (main):     https://cinouhome.pagees.dev/
+# Allows standard search engines AND AI crawlers/assistants to
+# discover and cite this site (homepage, about page, etc.)
+
+# ------------------------------
+# Default rule (all other bots)
+# ------------------------------
+User-agent: *
+Allow: /
+
+# ------------------------------
+# OpenAI
+# ------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ------------------------------
+# Google / Gemini
+# ------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ------------------------------
+# Perplexity
+# ------------------------------
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ------------------------------
+# Anthropic (Claude)
+# ------------------------------
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# ------------------------------
+# Microsoft / Bing (Copilot)
+# ------------------------------
+User-agent: bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# ------------------------------
+# Meta AI
+# ------------------------------
+User-agent: meta-externalagent
+Allow: /
+
+# ------------------------------
+# Common Crawl (feeds many AI datasets)
+# ------------------------------
+User-agent: CCBot
+Allow: /
+
+# ------------------------------
+# Sitemap
+# ------------------------------
+Sitemap: https://cinouai.eu.org/sitemap.xml

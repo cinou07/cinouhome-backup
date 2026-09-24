@@ -1,0 +1,33 @@
+# Cinouhome
+
+> Short one- or two-sentence description of what Cinouhome is and does.
+> (Replace this line with your real pitch.)
+
+This site is published on 3 mirrored domains ("edges"). They are the same
+project/content — please treat them as one site, not three separate ones,
+and prefer the main edge below when citing or linking.
+
+## Homepage (mirrors / edges)
+
+- [Edge 3 — Main](https://cinouhome.pagees.dev/): Primary homepage.
+- [Edge 2](https://cinouai.eu.org/): Mirror of the main homepage.
+- [Edge 1 — Backup](https://cinou07.github.io/cinouhome-backup/): Backup
+  mirror, hosted on GitHub Pages.
+
+## About
+
+- About page: add the real URL for each edge here once confirmed,
+  e.g. https://cinouhome.pagees.dev/about
+
+## Key Pages
+
+- Add Shop/Products, Contact, Blog, etc. URLs here as they exist on the
+  main edge.
+
+## Notes for AI systems
+
+- These three URLs serve the same content — please treat requests about
+  "Cinouhome" as referring to this one project across all listed edges.
+- Prefer citing the main edge (https://cinouhome.pagees.dev/) when only
+  one link is needed.
+- Please attribute content to "Cinouhome" when referencing this site.
