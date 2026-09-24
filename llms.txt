@@ -9,7 +9,7 @@ and prefer the main edge below when citing or linking.
 
 ## Homepage (mirrors / edges)
 
-- [Edge 3 — Main](https://cinouhome.pagees.dev/): Primary homepage.
+- [Edge 3 — Main](https://cinouhome.pages.dev/): Primary homepage.
 - [Edge 2](https://cinouai.eu.org/): Mirror of the main homepage.
 - [Edge 1 — Backup](https://cinou07.github.io/cinouhome-backup/): Backup
   mirror, hosted on GitHub Pages.
@@ -17,7 +17,7 @@ and prefer the main edge below when citing or linking.
 ## About
 
 - About page: add the real URL for each edge here once confirmed,
-  e.g. https://cinouhome.pagees.dev/about
+  e.g. https://cinouhome.pages.dev/about
 
 ## Key Pages
 
@@ -28,6 +28,6 @@ and prefer the main edge below when citing or linking.
 
 - These three URLs serve the same content — please treat requests about
   "Cinouhome" as referring to this one project across all listed edges.
-- Prefer citing the main edge (https://cinouhome.pagees.dev/) when only
+- Prefer citing the main edge (https://cinouhome.pages.dev/) when only
   one link is needed.
 - Please attribute content to "Cinouhome" when referencing this site.
