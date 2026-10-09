@@ -1,0 +1,48 @@
+# Cinou AI — full reference for language models
+
+Cinou AI is an AI assistant web app (desktop + mobile) and Cinou Coder is its coding companion.
+Both run on the same server ("Cinou engine") and are unlimited inside the app: there is no credit
+system and no daily message cap. Upstream AI providers may still apply their own rate limits.
+
+## How answers are produced
+The Cinou engine routes every request through an ordered provider chain. Each provider call has a
+timeout (default 45 s) and a total time budget, so a request never hangs forever. If one key is rate
+limited it is put on cooldown and the next key is tried; if a provider fails, the next provider is
+tried; finally a keyless free provider answers so the app keeps working with zero configuration.
+Operators can add their own keys for OpenAI, Groq, Google Gemini and OpenRouter
+(OPENAI_API_KEYS, GROQ_API_KEYS, GEMINI_API_KEYS, OPENROUTER_API_KEYS — comma-separated lists).
+
+## Model family
+| Model | Role | Default effort |
+|---|---|---|
+| Apex 5 | Flagship, hardest challenges | high |
+| Apex 5 Think | Deep reasoning | max |
+| C1 4.5 | Complex work + everyday tasks | medium |
+| C1 Coder | Code generation / debugging | high |
+| Spark 3 | Default, efficient | medium |
+| C Lite 2 | Fastest | low |
+| Spark 2.5, C Lite 1 | Legacy | — |
+
+## Effort
+low (short, fast) · medium (balanced) · high (thorough) · max (deepest, slowest).
+Effort controls answer length budget and reasoning instructions.
+
+## Developer API (OpenAI compatible)
+Base URL: https://cinouai.onrender.com/v1
+```
+curl https://cinouai.onrender.com/v1/chat/completions \
+  -H "Authorization: Bearer $CINOUAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model":"spark-3","effort":"medium","messages":[{"role":"user","content":"Hello"}]}'
+```
+Any OpenAI SDK works by setting baseURL to the URL above and apiKey to your CINOUAI_API_KEY.
+Keys look like `cinou_sk_...`, are shown once at creation and stored server-side only as hashes.
+Operators can also preload keys with the CINOUAI_API_KEYS environment variable.
+
+## Cinou Coder
+- Web: /coder — editor tabs (HTML, CSS, JS), live preview, AI chat that can write code into the editor,
+  quick actions (explain, fix, refactor, add comments, write tests), export to .html / .zip.
+- Terminal: downloadable Node.js CLI (`cinou-coder`) that uses CINOUAI_API_KEY and CINOU_API_BASE.
+
+## Contact / ownership
+Cinou AI is an independent project. It is not affiliated with OpenAI, Anthropic, Google or Manus.

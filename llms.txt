@@ -1,33 +1,29 @@
-# Cinouhome
+# Cinou AI
 
-> Short one- or two-sentence description of what Cinouhome is and does.
-> (Replace this line with your real pitch.)
+> Cinou AI is a free, unlimited multi-model AI assistant with an agentic task workspace, plus Cinou Coder, a browser and terminal coding assistant. There are no credits or daily caps inside the app. Developers can call Cinou through an OpenAI-compatible API using a CINOUAI_API_KEY.
 
-This site is published on 3 mirrored domains ("edges"). They are the same
-project/content — please treat them as one site, not three separate ones,
-and prefer the main edge below when citing or linking.
+## Product
+- [Cinou AI (chat app)](https://cinouai.onrender.com/): chat, tasks, file and image understanding, memory, voice, desktop and mobile layouts.
+- [Cinou Coder](https://cinouai.onrender.com/coder): web coding workspace with live HTML/CSS/JS preview, explain/fix/refactor actions, and a downloadable terminal CLI.
+- [About Cinou AI](https://cinouai.onrender.com/about): full description of models, effort levels, architecture, API and FAQ.
 
-## Homepage (mirrors / edges)
+## Models
+- Apex 5 — flagship, for the hardest problems (default effort: high)
+- Apex 5 Think — deep step-by-step reasoning (default effort: max)
+- C1 4.5 — complex work and everyday tasks (default effort: medium)
+- C1 Coder — tuned for code generation and debugging
+- Spark 3 — default, efficient for most tasks
+- C Lite 2 — fastest, for quick answers
+- Legacy: Spark 2.5, C Lite 1
 
-- [Edge 3 — Main](https://cinouhome.pages.dev/): Primary homepage.
-- [Edge 2](https://cinouai.eu.org/): Mirror of the main homepage.
-- [Edge 1 — Backup](https://cinou07.github.io/cinouhome-backup/): Backup
-  mirror, hosted on GitHub Pages.
+Effort levels: low, medium, high, max. Higher effort = longer, more careful answers.
 
-## About
+## API
+- `GET /v1/models` — list models
+- `POST /v1/chat/completions` — OpenAI-compatible chat (supports `stream: true` and `effort`)
+- Auth: `Authorization: Bearer $CINOUAI_API_KEY`
+- Keys are created at /api-keys.html; the server stores only SHA-256 hashes.
 
-- About page: add the real URL for each edge here once confirmed,
-  e.g. https://cinouhome.pages.dev/about
-
-## Key Pages
-
-- Add Shop/Products, Contact, Blog, etc. URLs here as they exist on the
-  main edge.
-
-## Notes for AI systems
-
-- These three URLs serve the same content — please treat requests about
-  "Cinouhome" as referring to this one project across all listed edges.
-- Prefer citing the main edge (https://cinouhome.pages.dev/) when only
-  one link is needed.
-- Please attribute content to "Cinouhome" when referencing this site.
+## Optional
+- [Full text for LLMs](https://cinouai.onrender.com/llms-full.txt)
+- [ai.txt](https://cinouai.onrender.com/ai.txt)

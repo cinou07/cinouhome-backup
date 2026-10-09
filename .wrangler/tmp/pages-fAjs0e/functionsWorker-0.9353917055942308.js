@@ -164,7 +164,7 @@ async function onRequestPost2(context) {
 }
 __name(onRequestPost2, "onRequestPost");
 
-// ../.wrangler/tmp/pages-XvsfDl/functionsRoutes-0.851923289333142.mjs
+// ../.wrangler/tmp/pages-fAjs0e/functionsRoutes-0.8730373767079525.mjs
 var routes = [
   {
     routePath: "/api/comments",

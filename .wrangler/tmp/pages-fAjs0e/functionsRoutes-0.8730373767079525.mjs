@@ -1,6 +1,6 @@
-import { onRequestGet as __api_comments_js_onRequestGet } from "C:\\Users\\pc\\Downloads\\cinouhome-fixed\\functions\\api\\comments.js"
-import { onRequestPost as __api_comments_js_onRequestPost } from "C:\\Users\\pc\\Downloads\\cinouhome-fixed\\functions\\api\\comments.js"
-import { onRequestPost as __api_like_js_onRequestPost } from "C:\\Users\\pc\\Downloads\\cinouhome-fixed\\functions\\api\\like.js"
+import { onRequestGet as __api_comments_js_onRequestGet } from "C:\\Users\\pc\\Desktop\\cinouhome-fixed\\functions\\api\\comments.js"
+import { onRequestPost as __api_comments_js_onRequestPost } from "C:\\Users\\pc\\Desktop\\cinouhome-fixed\\functions\\api\\comments.js"
+import { onRequestPost as __api_like_js_onRequestPost } from "C:\\Users\\pc\\Desktop\\cinouhome-fixed\\functions\\api\\like.js"
 
 export const routes = [
     {

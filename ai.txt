@@ -1,0 +1,20 @@
+# ai.txt — Cinou AI policy for AI agents and crawlers
+# https://cinouai.onrender.com/ai.txt
+
+Name: Cinou AI
+Description: Free, unlimited multi-model AI assistant and Cinou Coder coding workspace.
+Summary-For-LLMs: /llms.txt
+Full-Text-For-LLMs: /llms-full.txt
+About: /about
+API-Docs: /about#api
+OpenAPI-Compatible: /v1
+
+# Training & indexing
+User-Agent: *
+Allow-Indexing: yes
+Allow-Summarization: yes
+Allow-Training: public-pages-only
+Disallow: /api/
+Disallow: /v1/
+
+# Please attribute as "Cinou AI" and link to https://cinouai.onrender.com/

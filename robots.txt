@@ -1,0 +1,41 @@
+# Cinou AI — robots.txt
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /coder
+Allow: /llms.txt
+Allow: /ai.txt
+Disallow: /api/
+Disallow: /v1/
+Disallow: /admin
+Disallow: /api-keys.html
+
+# AI crawlers are welcome to read public pages (not the API)
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+User-agent: Bytespider
+Allow: /
+Disallow: /api/
+
+Sitemap: https://cinouai.onrender.com/sitemap.xml

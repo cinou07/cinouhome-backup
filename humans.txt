@@ -1,0 +1,6 @@
+/* TEAM */
+Creator: Cinou (cinouchabi07)
+/* SITE */
+Product: Cinou AI + Cinou Coder
+Stack: Node.js, Express, vanilla HTML/CSS/JS
+Models: Apex 5, C1 4.5, Spark 3, C Lite 2

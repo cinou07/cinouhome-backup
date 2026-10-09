@@ -1,214 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Cinou AI — the assistant that thinks with you</title>
-<meta name="description" content="Cinou AI is an AI assistant for chatting, writing, researching and building. Learn what Cinou AI is, who built it, what it can do, and how to get started.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://cinouhome.pages.dev/about">
-
-<meta name="theme-color" content="#000000">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="About Cinou AI">
-<meta property="og:description" content="What Cinou AI is, who built it, what it can do, and how to get started.">
-<meta property="og:url" content="https://cinouhome.pages.dev/about">
-<meta property="og:image" content="https://cinouhome.pages.dev/logo.png">
-
-<!-- Twitter/X -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About Cinou AI">
-<meta name="twitter:description" content="What Cinou AI is, who built it, what it can do, and how to get started.">
-<meta name="twitter:image" content="https://cinouhome.pages.dev/logo.png">
-
-<link rel="icon" type="image/png" href="assets/logo.png">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Cinou AI — unlimited multi-model assistant & Cinou Coder</title>
+  <meta name="description" content="Everything about Cinou AI: the Apex, C1, Spark and C Lite model family, effort levels, the unlimited Cinou engine, Cinou Coder, the OpenAI-compatible API and CINOUAI_API_KEY.">
+  <meta property="og:title" content="About Cinou AI">
+  <meta property="og:description" content="Unlimited multi-model AI assistant with agentic tasks and a real coding workspace.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cinouhome.pages.dev/about">
+  <meta property="og:image" content="https://cinouhome.pages.dev/favicon.ico">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://cinouhome.pages.dev/about">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/about.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Cinou AI","applicationCategory":"ProductivityApplication","operatingSystem":"Web, Android, iOS, Windows, macOS, Linux","url":"https://cinouhome.pages.dev/","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Unlimited multi-model AI assistant and Cinou Coder coding workspace."}
+  </script>
 </head>
 <body>
-
-<!-- ===================== NAV ===================== -->
-<header class="nav" id="top">
-  <div class="nav__inner">
-    <a class="nav__brand" href="/">
-      <img src="assets/logo.png" alt="Cinou AI" class="nav__logo">
-      <span class="nav__wordmark">Cinou<span class="nav__wordmark-ai">AI</span></span>
-    </a>
-
-    <nav class="nav__links" aria-label="Primary">
-      <a href="/about" aria-current="page">About</a>
-      <a href="/#product">Product</a>
-      <a href="/#premium">Premium</a>
-      <a href="/#download">Download</a>
-      <a href="/#comments">Comments</a>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <header class="nav">
+    <a class="brand" href="/"><img src="/favicon.ico" alt="" width="26" height="26"> Cinou AI</a>
+    <nav>
+      <a href="#models">Models</a><a href="#engine">Engine</a><a href="#coder">Coder</a><a href="#api">API</a><a href="#faq">FAQ</a>
     </nav>
+    <a class="btn small" href="/">Open app</a>
+  </header>
 
-    <a class="btn btn--primary btn--small" href="https://cinouai.onrender.com/">Try Cinou AI in your browser</a>
-
-    <button class="nav__burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="/about">About</a>
-    <a href="/#product">Product</a>
-    <a href="/#premium">Premium</a>
-    <a href="/#download">Download</a>
-    <a href="/#comments">Comments</a>
-    <a class="btn btn--primary" href="https://cinouai.onrender.com/">Try Cinou AI</a>
-  </div>
-</header>
-
-<!-- ===================== PAGE HERO ===================== -->
-<section class="page-hero">
-  <div class="page-hero__inner">
-    <p class="page-hero__eyebrow">About Cinou AI</p>
-    <h1 class="page-hero__title">One assistant. Every conversation, remembered.</h1>
-    <p class="page-hero__subtitle">
-      Cinou AI is a smart, easy-to-use AI assistant you can chat with to write, plan,
-      research and create — on the web today, and soon on your phone and PC.
-    </p>
-  </div>
-</section>
-
-<!-- ===================== CONTENT ===================== -->
-<main class="content-page">
-  <div class="content-page__inner">
-
-    <section class="content-block">
-      <p class="content-block__eyebrow">What it is</p>
-      <h2>What is Cinou AI?</h2>
-      <p>
-        Cinou AI is a conversational assistant you can turn to for everyday thinking work:
-        drafting messages, researching a topic, planning a project, brainstorming ideas,
-        or just talking through a problem. It's designed to keep track of the whole
-        conversation — not just your last message — so you don't have to repeat context
-        every time you come back to it.
-      </p>
-      <p>
-        It's free to start, works right in your browser with no install, and is built to
-        follow you across devices as new apps roll out.
-      </p>
+  <main>
+    <section class="hero">
+      <span class="pill">∞ Unlimited · no credits · no daily caps</span>
+      <h1>An AI that <span class="grad" id="rot">thinks</span><br>with you.</h1>
+      <p class="lead">Cinou AI is a multi-model assistant that chats, plans, runs tasks and writes code. Pick a model, pick an effort, and go — as many times as you want.</p>
+      <div class="cta">
+        <a class="btn" href="/">Start chatting</a>
+        <a class="btn ghost" href="/coder">Open Cinou Coder</a>
+      </div>
+      <div class="stats">
+        <div><b data-count="8">0</b><span>models</span></div>
+        <div><b data-count="4">0</b><span>effort levels</span></div>
+        <div><b data-count="5">0</b><span>provider fallbacks</span></div>
+        <div><b>∞</b><span>messages</span></div>
+      </div>
     </section>
 
-    <section class="content-block">
-      <p class="content-block__eyebrow">Who's behind it</p>
-      <h2>Who created Cinou AI?</h2>
-      <p>
-        Cinou AI is built and maintained by Cinou Studios .
-        <!-- Placeholder: swap this paragraph for a short, real note about your background,
-             why you built Cinou, and any team members — the same way other placeholder
-             links in this project are marked, this is meant to be personalized before launch. -->
-        <em>Cinou Studios creator named Yacine Chabi, and he called Cinou as a alias</em>
-      </p>
+    <section id="models" class="reveal">
+      <h2>The Cinou model family</h2>
+      <p class="sub">Four families, each with versions. Every model is unlimited.</p>
+      <div class="models" id="models-grid"></div>
+      <div class="effort reveal">
+        <h3>Effort</h3>
+        <p>Effort decides how much the model thinks before answering. Drag to see what changes.</p>
+        <input type="range" id="effort" min="0" max="3" value="1" aria-label="Effort">
+        <div class="effort-out" id="effort-out"></div>
+      </div>
     </section>
 
-    <section class="content-block">
-      <p class="content-block__eyebrow">What it does</p>
-      <h2>What features does Cinou AI provide?</h2>
-      <ul class="content-list">
-        <li><strong>Context that sticks.</strong> Cinou keeps track of an entire conversation, so follow-up questions and long threads stay coherent.</li>
-        <li><strong>Works everywhere.</strong> Start a conversation on the web and continue it later — your work follows you, not the device.</li>
-        <li><strong>Private by design.</strong> Your conversations are yours; Cinou isn't built to quietly turn what you share into training data.</li>
-        <li><strong>Cinou Premium.</strong> Priority access at busy times, extended memory across conversations, and early access to new capabilities.</li>
+    <section id="features" class="reveal">
+      <h2>What Cinou can do</h2>
+      <div class="grid">
+        <article class="card"><h3>Chat like a person</h3><p>Natural conversation with memory, personas and styles. Markdown, tables, code and math render beautifully.</p></article>
+        <article class="card"><h3>Agentic tasks</h3><p>A Manus-style task workspace: give a goal, Cinou plans the steps and works through them.</p></article>
+        <article class="card"><h3>Files & images</h3><p>Drop in documents and pictures to summarize, compare, translate or extract data.</p></article>
+        <article class="card"><h3>Voice</h3><p>Talk to Cinou and hear answers back, on desktop and phone.</p></article>
+        <article class="card"><h3>Memory</h3><p>Cinou remembers what you tell it to — preferences, projects, facts — and you can edit it any time.</p></article>
+        <article class="card"><h3>Everywhere</h3><p>Desktop web, mobile web and installable PWA, with the same chats synced.</p></article>
+      </div>
+    </section>
+
+    <section id="engine" class="reveal">
+      <h2>The Cinou engine</h2>
+      <p class="sub">Why Cinou always answers.</p>
+      <ol class="flow">
+        <li><b>Your message</b><span>Model + effort chosen in the picker</span></li>
+        <li><b>Router</b><span>Maps the Cinou model to the best upstream model</span></li>
+        <li><b>Key rotation</b><span>Rate-limited keys cool down; the next key is used</span></li>
+        <li><b>Provider fallback</b><span>OpenAI → Groq → Gemini → OpenRouter → free</span></li>
+        <li><b>Timeouts</b><span>Every call has a deadline — no endless spinner</span></li>
+        <li><b>Answer</b><span>Returned to the app or your API client</span></li>
+      </ol>
+      <p class="note">“Unlimited” means Cinou itself never counts credits or caps messages. Upstream providers you configure can still apply their own limits; the engine works around them by rotating keys and providers.</p>
+    </section>
+
+    <section id="coder" class="reveal split">
+      <div>
+        <h2>Cinou Coder</h2>
+        <p>A real coding workspace in your browser: HTML/CSS/JS editors with a live preview, an AI pair-programmer that writes straight into your files, and one-click <em>explain · fix · refactor · comment · test</em>.</p>
+        <p>Prefer the terminal? Download the <code>cinou-coder</code> CLI — it uses the same unlimited engine via your <code>CINOUAI_API_KEY</code>.</p>
+        <a class="btn" href="/coder">Launch Coder</a>
+      </div>
+      <pre class="term"><span class="c">$</span> export CINOUAI_API_KEY=cinou_sk_…
+<span class="c">$</span> cinou-coder --model c1-coder "write a debounce in JS"
+<span class="g">● C1 Coder · high effort</span>
+function debounce(fn, ms = 300) {
+  let t;
+  return (...a) =&gt; { clearTimeout(t); t = setTimeout(() =&gt; fn(...a), ms); };
+}</pre>
+    </section>
+
+    <section id="api" class="reveal">
+      <h2>Developer API</h2>
+      <p class="sub">Start creating your cinou api keys at <a href="https://cinouai.onrender.com/api-keys">API keys</a>.</p>
+      <div class="tabs" role="tablist">
+        <button class="on" data-tab="curl">cURL</button><button data-tab="js">JavaScript</button><button data-tab="py">Python</button>
+      </div>
+      <div class="code-wrap"><button class="copy" id="copy">Copy</button><pre id="code"></pre></div>
+      <ul class="facts">
+        <li><code>GET /v1/models</code> — list models</li>
+        <li><code>POST /v1/chat/completions</code> — chat, supports <code>stream</code> and <code>effort</code></li>
+        <li>Keys start with <code>cinou_sk_</code>, are shown once, and stored only as SHA-256 hashes</li>
+        <li>Operators can preload keys via the <code>CINOUAI_API_KEYS</code> env var</li>
       </ul>
     </section>
 
-    <section class="content-block">
-      <p class="content-block__eyebrow">Getting started</p>
-      <h2>How do I use Cinou AI?</h2>
-      <ol class="steps-list">
-        <li>
-          <div>
-            <strong>Open Cinou AI in your browser</strong>
-            <p>You can try Cinou in your browser, No install needed — or install it on your device — head to the web app and you're straight into a conversation.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <strong>Ask it anything</strong>
-            <p>Write, research, plan, or just ask a question — Cinou responds and keeps the thread going as you reply.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <strong>Upgrade if you need more | <p>for this time it is completely free .</p></strong>
-            <p>Cinou Premium adds priority speed, longer memory, and early access to new features when you're ready.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <strong>Bring it with you</strong>
-            <p>Phone apps are on the way — the Android build is already available to download, with Ios and PC coming soon.</p>
-          </div>
-        </li>
-      </ol>
+    <section id="faq" class="reveal">
+      <h2>FAQ</h2>
+      <details><summary>Is Cinou AI really free and unlimited?</summary><p>Yes inside the app: no credits, no message caps, no paywalled models. The server uses a keyless free provider by default, and owners can add their own provider keys for more speed and capacity.</p></details>
+      <details><summary>What are Apex, C1, Spark and C Lite?</summary><p>They are Cinou's model tiers. Each is routed to a suitable upstream model and tuned with its own system prompt and default effort.</p></details>
+      <details><summary>What happens if a provider is down?</summary><p>The engine times out the call and moves to the next key or provider automatically, so you get an answer or a clear error — never an endless wait.</p></details>
+      <details><summary>Is my data private?</summary><p>Chats are stored in your browser and, if you sign in, synced to your account. API keys are stored hashed. Messages are sent to the AI provider that answers them.</p></details>
+      <details><summary>Is Cinou affiliated with Claude, OpenAI or Manus?</summary><p>No. Cinou AI is an independent project; its design is inspired by modern assistants but its code is its own.</p></details>
     </section>
+  </main>
 
-    <div class="about-cta">
-      <h2>follow us in:</h2>
-      <p>
-        Facebook: none
-        Instagram: cinou.ai
-        Twitter -X-: none.
-        Youtube: Cooming soon. 
-      </p>
-    </div>
-
-    <div class="about-cta">
-      <h2>Ready to try it?</h2>
-      <p>Jump into a conversation with Cinou AI right now — you can try it without sign up and start.</p>
-      <div class="about-cta__actions">
-        <a href="https://cinouai.onrender.com/" class="btn btn--primary btn--large">Try Cinou AI on web</a>
-        <a href="https://cinouai-premium-2.onrender.com/" class="btn btn--secondary btn--large">Cinou Premium</a>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<!-- ===================== FOOTER ===================== -->
-<footer class="footer">
-  <div class="section-inner footer__inner">
-    <a class="nav__brand" href="/">
-      <img src="assets/logo.png" alt="Cinou AI" class="nav__logo">
-      <span class="nav__wordmark">Cinou<span class="nav__wordmark-ai">AI</span></span>
-    </a>
-    <nav class="footer__links" aria-label="Footer">
-      <a href="/about">About</a>
-      <a href="/#product">Product</a>
-      <a href="/#premium">Premium</a>
-      <a href="/#download">Download</a>
-      <a href="/#comments">Comments</a>
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
-    </nav>
-    <p class="footer__copy">© <span id="year"></span> Cinou Studios. All rights reserved.</p>
-  </div>
-</footer>
-
-<script>
-  // Minimal shared behavior for this page (year stamp + mobile nav).
-  // This page intentionally doesn't load script.js, since that file also
-  // wires up the phone modal and comment system, neither of which exist here.
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  (function(){
-    var burger = document.getElementById('burgerBtn');
-    var menu = document.getElementById('mobileMenu');
-    burger.addEventListener('click', function(){
-      var open = menu.classList.toggle('is-open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    menu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        menu.classList.remove('is-open');
-        burger.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-</script>
+  <footer>
+    <span>© <span id="yr"></span> Cinou AI</span>
+    <span><a href="/llms.txt">llms.txt</a> · <a href="/ai.txt">ai.txt</a> · <a href="/sitemap.xml">sitemap</a> · <a href="/robots.txt">robots</a></span>
+  </footer>
+  <script src="/about.js"></script>
 </body>
 </html>
