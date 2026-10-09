@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/comments",
+      "mountPath": "/api",
+      "method": "GET",
+      "module": [
+        "api/comments.js:onRequestGet"
+      ]
+    },
+    {
+      "routePath": "/api/comments",
+      "mountPath": "/api",
+      "method": "POST",
+      "module": [
+        "api/comments.js:onRequestPost"
+      ]
+    },
+    {
+      "routePath": "/api/like",
+      "mountPath": "/api",
+      "method": "POST",
+      "module": [
+        "api/like.js:onRequestPost"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}
