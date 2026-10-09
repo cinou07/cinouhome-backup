@@ -77,7 +77,7 @@
         <li><b>Your message</b><span>Model + effort chosen in the picker</span></li>
         <li><b>Router</b><span>Maps the Cinou model to the best upstream model</span></li>
         <li><b>Key rotation</b><span>Rate-limited keys cool down; the next key is used</span></li>
-        <li><b>Provider fallback</b><span>OpenAI → Groq → Gemini → OpenRouter → free</span></li>
+        <li><b>Provider fallback</b><span>CinouAI api server/key → free</span></li>
         <li><b>Timeouts</b><span>Every call has a deadline — no endless spinner</span></li>
         <li><b>Answer</b><span>Returned to the app or your API client</span></li>
       </ol>
@@ -89,7 +89,7 @@
         <h2>Cinou Coder</h2>
         <p>A real coding workspace in your browser: HTML/CSS/JS editors with a live preview, an AI pair-programmer that writes straight into your files, and one-click <em>explain · fix · refactor · comment · test</em>.</p>
         <p>Prefer the terminal? Download the <code>cinou-coder</code> CLI — it uses the same unlimited engine via your <code>CINOUAI_API_KEY</code>.</p>
-        <a class="btn" href="/coder">Launch Coder</a>
+        <a class="btn" href="https://cinouai.onrender.com/coder">Launch Coder</a>
       </div>
       <pre class="term"><span class="c">$</span> export CINOUAI_API_KEY=cinou_sk_…
 <span class="c">$</span> cinou-coder --model c1-coder "write a debounce in JS"
